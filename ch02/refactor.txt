@@ -1,0 +1,7 @@
+- What is a perceptron?
+- (perceptron-1) Clean up code, extract code to functions, rename methods.
+- (perceptron-2) Refactor code to use other two output classes.
+- Move classes and plot functions in a library.
+- (perceptron-3) Refactor code to use other two features.
+- (adaline-1) Clean up code
+- (adaline-2) 

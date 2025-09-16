@@ -143,6 +143,11 @@ class Perceptron:
             errors = 0
             for xi, target in zip(X, y):
                 update = self.eta * (target - self.predict(xi))
+
+                prediction = self.predict(xi)
+                weights = self.w_.round(3).tolist()
+                target = (target,)
+
                 self.w_ += update * xi
                 self.b_ += update
                 errors += int(update != 0.0)
@@ -166,13 +171,6 @@ np.arccos(v1.dot(v2) / (np.linalg.norm(v1) * np.linalg.norm(v2)))
 
 
 
-# ## Training a perceptron model on the Iris dataset
-
-# ...
-
-# ### Reading-in the Iris data
-
-
 
 
 try:
@@ -191,9 +189,6 @@ except HTTPError:
     
 df.tail()
 
-
-
-# ### Plotting the Iris data
 
 
 
@@ -218,9 +213,6 @@ plt.legend(loc='upper left')
 # plt.savefig('images/02_06.png', dpi=300)
 plt.show()
 
-
-
-# ### Training the perceptron model
 
 
 
